@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MicroBlogging</title>
+
+    <!-- Font Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/imageUpload.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/MicroBlogging.js"></script>
+    <script src="https://bundle.run/buffer@6.0.3"></script>
+    <script src="https://unpkg.com/ipfs@0.61.1-rc.2/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div class="main">
+        <section class = "posting">
+            <div class="container">
+                <form action = "#" class="post-form" id="post-form">
+                    <div class="form-group">
+                        <label for="name"></label>
+                        <textarea rows="1" type="text" name="blogContent" id="blog-content" placeholder="What's Up" maxlength="400"></textarea>
+                    </div>
+                    <div class="button-group">
+                        <div class="button_outer">
+                            <div class="btn_upload">
+                                <input type="file" id="upload_file" name="uploaded_image">
+                                Upload Image
+                            </div>
+                            <div class="processing_bar"></div>
+                            <div class="success_box"></div>
+        
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="blogContentSubmit" id="blogSubmit" class="form-submit" value="Submit"/>
+                        </div>
+    
+                    </div>
+                    <div class="error_msg"></div>
+                    <div class="uploaded_file_view" id="uploaded_view">
+                        <span class="file_remove">X</span>
+                    </div>    
+                </form>
+            </div>
+        </section>
+        <section id = "posts-container"class = "posts">
+        </section>
+    </div>
+
+    <!-- JS -->
+    <script src="js/utils.js"></script>
+    <script src="js/store.js"></script>
+    <script src="js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
